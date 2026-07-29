@@ -730,9 +730,20 @@ h1, h2, h3, h4, h5, h6, .font-heading {
    ══════════════════════════════════════════════════════════════════════════ */
 .footer {
     background: linear-gradient(180deg, #0F172A, #1E293B);
-    color: #94A3B8;
+    color: #F8FAFC;
     padding-top: 4rem;
     padding-bottom: 2rem;
+}
+
+.footer p,
+.footer span,
+.footer small {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.footer .text-white-50,
+.footer .text-muted {
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .footer-brand {
@@ -754,7 +765,7 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 .footer-links li { margin-bottom: 0.6rem; }
 
 .footer-links a {
-    color: #94A3B8;
+    color: #CBD5E1;
     text-decoration: none;
     font-size: 0.9rem;
     transition: var(--transition);
@@ -766,9 +777,14 @@ h1, h2, h3, h4, h5, h6, .font-heading {
 }
 
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
     padding-top: 1.5rem;
     margin-top: 3rem;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.85) !important;
 }
 
 .hover-teal:hover { color: #5EEAD4 !important; }
