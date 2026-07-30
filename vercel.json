@@ -14,10 +14,7 @@
   ],
   "functions": {
     "app.py": {
-      "includeFiles": [
-        "templates/**",
-        "static/**"
-      ]
+      "includeFiles": "{templates,static}/**"
     }
   }
 }
