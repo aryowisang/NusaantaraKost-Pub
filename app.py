@@ -9,6 +9,18 @@ def create_app():
     template_dir = os.path.join(base_dir, 'templates')
     static_dir = os.path.join(base_dir, 'static')
     
+    print("=== DEBUG VERCEL FILESYSTEM ===")
+    print("Base dir resolved:", base_dir)
+    print("Template dir resolved:", template_dir)
+    print("Template dir exists:", os.path.exists(template_dir))
+    if os.path.exists(template_dir):
+        print("Template dir contents:", os.listdir(template_dir))
+        public_dir = os.path.join(template_dir, 'public')
+        print("Public template dir exists:", os.path.exists(public_dir))
+        if os.path.exists(public_dir):
+            print("Public template contents:", os.listdir(public_dir))
+    print("================================")
+    
     app = Flask(__name__, template_folder=template_dir, static_folder=static_dir)
     app.config.from_object(Config)
 
