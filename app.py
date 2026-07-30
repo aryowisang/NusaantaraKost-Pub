@@ -1,21 +1,11 @@
 from flask import Flask
 from config import Config
-import os
 
 def create_app():
-    app = Flask(
-        __name__,
-        template_folder="templates",
-        static_folder="static"
-    )
-
-    print("Root path:", app.root_path)
-    print("Template folder:", app.template_folder)
-    print("Templates exists:", os.path.exists(os.path.join(app.root_path, "templates")))
-    print("Public index exists:", os.path.exists(os.path.join(app.root_path, "templates", "public", "index.html")))
-
+    app = Flask(__name__)
     app.config.from_object(Config)
 
+    # Register Blueprints
     from routes.public import public_bp
     from routes.admin import admin_bp
     from routes.kamar import admin_kamar_bp
@@ -31,3 +21,7 @@ def create_app():
     return app
 
 app = create_app()
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
