@@ -62,7 +62,8 @@ def get_db():
             port=Config.MYSQL_PORT,
             user=Config.MYSQL_USER,
             password=Config.MYSQL_PASSWORD,
-            database=Config.MYSQL_DB
+            database=Config.MYSQL_DB,
+            connection_timeout=3
         )
         if conn.is_connected():
             return conn
