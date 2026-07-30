@@ -2,9 +2,10 @@ import os
 
 class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'nusantarakos-secret-key-2026'
-    MYSQL_HOST = os.environ.get('MYSQL_HOST') or 'localhost'
-    MYSQL_USER = os.environ.get('MYSQL_USER') or 'root'
-    MYSQL_PASSWORD = os.environ.get('MYSQL_PASSWORD') or ''
-    MYSQL_DB = os.environ.get('MYSQL_DB') or 'nusakost'
+    MYSQL_HOST = os.environ.get('MYSQL_HOST') or 'zokekf.h.filess.io'
+    MYSQL_PORT = int(os.environ.get('MYSQL_PORT') or 3307)
+    MYSQL_USER = os.environ.get('MYSQL_USER') or 'db_nusakost_upelevenhe'
+    MYSQL_PASSWORD = os.environ.get('MYSQL_PASSWORD') or 'd270fe84ac85a436959625052e126cd1a597ccdd'
+    MYSQL_DB = os.environ.get('MYSQL_DB') or 'db_nusakost_upelevenhe'
     UPLOAD_FOLDER = os.path.join(os.path.abspath(os.path.dirname(__file__)), 'static', 'uploads')
     MAX_CONTENT_LENGTH = 16 * 1024 * 1024  # 16MB max limit
