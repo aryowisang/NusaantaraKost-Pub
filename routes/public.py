@@ -14,7 +14,7 @@ def home():
     # Latest 3 available rooms for landing page
     featured_rooms = available_rooms[:3]
     
-    return render_template('public/index.html', 
+    return render_template('views/index.html', 
                            rooms=featured_rooms, 
                            total_rooms=total_rooms, 
                            total_available=total_available, 
@@ -23,16 +23,16 @@ def home():
 @public_bp.route('/kamar')
 def room_catalog():
     rooms = fetch_rooms()
-    return render_template('public/kamar.html', rooms=rooms)
+    return render_template('views/kamar.html', rooms=rooms)
 
 @public_bp.route('/about')
 def about():
-    return render_template('public/about.html')
+    return render_template('views/about.html')
 
 @public_bp.route('/contact')
 def contact():
-    return render_template('public/contact.html')
+    return render_template('views/contact.html')
 @public_bp.route('/facilities')
 def facilities():
-    return render_template('public/facilities.html')
+    return render_template('views/facilities.html')
 
